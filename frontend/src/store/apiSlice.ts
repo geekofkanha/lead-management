@@ -3,7 +3,7 @@ import { Lead } from "../types/Lead";
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:1337/api/" }), // Strapi default port
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_URL }), // Strapi default port
   tagTypes: ["Leads"],
   endpoints: (builder) => ({
     getLeads: builder.query<Lead[], string | void>({
@@ -57,3 +57,4 @@ export const apiSlice = createApi({
 
 export const { useGetLeadsQuery, useAddLeadMutation, useUpdateLeadMutation } =
   apiSlice;
+
