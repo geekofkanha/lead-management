@@ -1,17 +1,36 @@
-# Mini Dashboard with API Connection
 
-## Overview
-Mini internal dashboard that lists leads and allows filtering by status, adding leads, and updating leads. Frontend uses React + TypeScript + Tailwind + Redux Toolkit + RTK Query. Backend is a simple Express server storing data in `db.json` via lowdb.
+### **Frontend-Specific**
 
-## Decisions / Rationale
-- **RTK Query** used for caching, simple hooks and invalidation.
-- **lowdb (JSON)** chosen as a quick, persistent mock DB to meet the assignment requirement; easy to replace with SQLite or Strapi.
-- **Tailwind** for quick styling and responsive UI.
+# Mini Dashboard – Frontend
 
-## Run locally
-1. Backend:
+This repository contains the **frontend implementation** of the Mini Dashboard project using React + TypeScript + Tailwind CSS.
+
+---
+
+## **Features**
+
+* Display leads in a table with columns: Name, Company, Email, Status
+* Filter leads by Status (Active / Inactive)
+* Add a new lead via modal
+* Basic routing for navigation
+
+
+## **Running Locally**
+
+1. Navigate to the frontend folder:
+
    ```bash
-   cd backend
+   cd frontend
+   ```
+2. Install dependencies:
+
+   ```bash
    npm install
-   npm run dev
-   # server: http://localhost:4000
+   ```
+3. Start development server:
+
+   ```bash
+   npm start
+   ```
+4. App URL: `http://localhost:3000`
+5. Ensure backend API is running (Strapi backend on dedicated server)
