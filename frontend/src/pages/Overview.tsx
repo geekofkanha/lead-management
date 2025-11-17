@@ -66,7 +66,7 @@ export default function Overview() {
               </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-baseline gap-3">
               <div className="flex items-center gap-2 text-gray-600">
                 <FilterIcon className="w-4 h-4" />
                 <span className="text-sm font-medium">Filter:</span>
@@ -122,3 +122,4 @@ export default function Overview() {
     </div>
   );
 }
+
